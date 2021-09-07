@@ -5,7 +5,7 @@ import java.util.regex.*;
 public class EmailValidation {
 
 	public static boolean emailValidation(String emailAddress) {
-		String emailRegex = "^[a-zA-Z]{1,}[\\.\\_\\-\\+]?[a-zA-Z]*[@]{1}[a-zA-Z]{1,}[.]{1}[a-z]{2,}";
+		String emailRegex = "^[a-zA-Z]{1,}[\\.\\_\\-\\+]?[a-zA-Z]*[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]{2}$";
 		return Pattern.matches(emailRegex,emailAddress);
 	}
 
